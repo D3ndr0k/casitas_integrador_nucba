@@ -564,7 +564,6 @@ footer p {
   justify-content: start;
   margin-top: 4rem;
   gap: 1rem;
-  background-color: #ff0000;
   background-image: url(../img/buscar.jpg);
   background-size: cover;
 }
