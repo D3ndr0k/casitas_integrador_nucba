@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casitas</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <a href="index.html">
+        <picture>
+          <img src="./assets/img/casitaslogo.webp" alt="logo Casitas" />
+        </picture>
+      </a>
+      <div>
+        <input class="menu-open" id="menu-open" type="checkbox" />
+        <label for="menu-open">
+          <svg
+            class
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            style="fill: rgba(0, 0, 0, 1)"
+          >
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+          </svg>
+        </label>
+
+        <nav id="menu">
+          <a href="./alquiler.html">Alquiler</a>
+          <a href="./venta.html">Venta</a>
+          <a href="./buscar.html#inmobiliarias">Inmobiliarias</a>
+          <a href="login.html">Ingresar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-home">
+      <section class="portada">
+        <h1>Casitas:</h1>
+        <h1>Hogares felices</h1>
+        <p>Alquiler y venta de inmuebles alrededor del Uruguay</p>
+        <nav>
+          <a href="./buscar.html">Buscar propiedad</a>
+          <a href="./login.html">Publica tu inmueble</a>
+        </nav>
+      </section>
+      <picture>
+        <img src="./assets/img/img-portada.jpg" alt="Imagen de portada" />
+      </picture>
+    </main>
+
+    <section id="alquilerMon" class="cards">
+      <header>
+        <h2>Alquiler en Montevideo</h2>
+      </header>
+
+      <ul>
+        <span class="btn-move"><p><</p></span>
+        <li>
+          <a href="./modelocasa.html">
+            <picture>
+              <img src="./assets/img/casa1.jpg" alt="" />
+            </picture>
+            <div class="text-card">
+              <h3>$85.000</h3>
+              <p class="boldblue">Prado, Montevideo</p>
+              <p class="bold">5 Dorm. | 3 Baños | 771 m²</p>
+
+              <p>
+                Hermosa residencia en Prado. La casa presenta una fachada
+                neoclásica con jardín frontal y terraza amplia. En su interior
+                cuenta con un....
+              </p>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <picture>
+            <img src="./assets/img/casa2.webp" alt="" />
+          </picture>
+          <div class="text-card">
+            <h3>$50.000</h3>
+            <p class="boldblue">Positos, Montevideo</p>
+            <p class="bold">4 Dorm. | 1 Baños | 207 m²</p>
+
+            <p>
+              Una casa bien situada en Positos, ideal para familias, con
+              espacios amplios y comodidades modernas/tradicionales....
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <picture>
+            <img src="./assets/img/casa3.jpg" alt="" />
+          </picture>
+          <div class="text-card">
+            <h3>$120.000</h3>
+            <p class="boldblue">Buceo, Montevideo</p>
+            <p class="bold">6 Dorm. | 3 Baños | 649 m²</p>
+
+            <p>
+              Casa en el barrio Buceo, ideal para familias, con espacios
+              cómodos, buena iluminación y ubicación cercana a servicios
+              esenciales y....
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <picture>
+            <img src="./assets/img/casa4.jpeg" alt="" />
+          </picture>
+          <div class="text-card">
+            <h3>$120.000</h3>
+            <p class="boldblue">Malvin, Montevideo</p>
+            <p class="bold">2 Dorm. | 1 Baños | 79 m²</p>
+
+            <p>
+              Casa en Montevideo con dos dormitorios, ideal para familias
+              pequeñas o parejas, ofrece espacios acogedores y buena
+              distribución.....
+            </p>
+          </div>
+        </li>
+
+        <span class="btn-move"><p>></p></span>
+      </ul>
+    </section>
+
+    <section class="contactus" id="contactanos">
+      <div class="contact">
+        <h3>Contáctenos</h3>
+        <table class="contacto">
+          <tr>
+            <th>Juan Perez</th>
+            <th>Karol karola</th>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="minilogo"
+                src="./assets/img/map.svg"
+                alt="map logo"
+              />Pepe Perez 754
+            </td>
+            <td>
+              <img
+                class="minilogo"
+                src="./assets/img/map.svg"
+                alt="map logo"
+              />karolaina 007
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="minilogo"
+                src="./assets/img/mail.svg"
+                alt="mail logo"
+              />perez@gmail.com
+            </td>
+            <td>
+              <img
+                class="minilogo"
+                src="./assets/img/mail.svg"
+                alt="mail logo"
+              />kami@gmail.com
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="minilogo"
+                src="./assets/img/phone.svg"
+                alt="phone logo"
+              />098 098 098
+            </td>
+            <td>
+              <img
+                class="minilogo"
+                src="./assets/img/phone.svg"
+                alt="phone logo"
+              />098 007 887
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="map">
+        <iframe
+          width="100%"
+          height="100%"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=artigas,artigas%20,uruguay+(Casitas)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        ></iframe>
+      </div>
+    </section>
+    <section class="form-message">
+      <h3>No dudes en contactarnos!</h3>
+      <form action="#">
+        <input type="text" placeholder="Nombre *" required />
+        <input type="email" placeholder="Email *" required />
+        <input type="number" placeholder="Teléfono " />
+        <textarea
+          id="message"
+          placeholder="Ingresa tu mensaje"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <button id="enviar" type="submit">Enviar</button>
+        <button id="borrar" type="reset">Borrar</button>
+      </form>
+    </section>
+
+    <footer>
+      <picture
+        ><img src="./assets/img/casitaslogo.webp" alt="logo casitas"
+      /></picture>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#contactanos">Contáctenos</a>
+        <a href="#alquilerMon">Alquiler en Montevideo</a>
+        <a href="./aboutus.html">Sobre Nosotros</a>
+      </nav>
+      <figure>
+        <a href="https://www.facebook.com/"
+          ><img src="./assets/img/facebook.svg" alt="facebook"
+        /></a>
+        <a href="https://www.instagram.com/"
+          ><img src="./assets/img/insta.svg" alt="instagram"
+        /></a>
+        <a href="https://x.com/"
+          ><img src="./assets/img/twitter.svg" alt="twitter"
+        /></a>
+      </figure>
+      <p>Copyright ©2024 | made by Kami :D</p>
+    </footer>
+  </body>
+</html>

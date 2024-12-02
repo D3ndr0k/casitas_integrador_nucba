@@ -1,0 +1,810 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --bg: #f0f0f0;
+  --blanco: #ffffff;
+  --azul: #0098da;
+  --negro: #000000;
+  --gris: #757575;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+}
+
+/* header */
+
+#main-header {
+  background-color: var(--blanco);
+  display: flex;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.5rem;
+  min-width: 100%;
+  border-bottom: 1px solid rgb(190, 190, 190);
+  font-size: 1.2rem;
+  position: fixed;
+  z-index: 9;
+}
+
+#main-headre picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-header img {
+  width: 4rem;
+  margin: 1rem;
+  margin-top: 1.5rem;
+}
+
+#main-header a {
+  text-decoration: none;
+  color: var(--negro);
+}
+#main-header a:last-child {
+  color: var(--blanco);
+  background-color: var(--azul);
+  padding: 0.4rem 0.7rem;
+  border-radius: 2rem;
+}
+
+#menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+  flex: 1;
+  gap: 1rem;
+}
+
+.menu-open,
+#main-header label {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  #main-header label {
+    display: flex;
+  }
+  #main-header {
+    justify-content: space-between;
+    border-bottom: 0px;
+  }
+
+  #main-header label {
+    margin-right: 1rem;
+  }
+  #menu {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--blanco);
+    box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: none;
+  }
+  .menu-open:checked ~ #menu {
+    display: flex;
+  }
+}
+
+/* portada */
+
+.main-home {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
+  padding: 10rem;
+  gap: 3rem;
+  width: 100%;
+  height: 20rem;
+}
+
+.portada {
+  display: flex;
+  align-items: center;
+  height: 15rem;
+  max-width: 320px;
+  min-width: 290px;
+  flex-direction: column;
+}
+
+.portada h1 {
+  font-size: 2.5rem;
+}
+.portada h1:nth-child(2) {
+  padding-bottom: 1.5rem;
+}
+
+.portada nav {
+  justify-content: center;
+  display: flex;
+  width: 500px;
+}
+
+.portada a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem 0;
+  width: 10rem;
+  height: 2rem;
+  margin: 2rem 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid var(--negro);
+  color: var(--blanco);
+  font-weight: 600;
+  background-color: var(--negro);
+}
+
+.portada a:nth-child(2) {
+  border: 2px solid var(--negro);
+  background-color: var(--bg);
+  color: var(--negro);
+}
+
+.main-home picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-home picture img {
+  width: 95%;
+  max-width: 20rem;
+  min-width: 250px;
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem;
+}
+
+@media (max-width: 720px) {
+  .main-home {
+    flex-direction: column;
+    height: 20rem;
+    padding: 0;
+    margin-top: 5rem;
+  }
+  .portada {
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+  }
+  .main-home picture img {
+    display: none;
+  }
+  .portada nav {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+/* aboutus */
+
+.main-about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-about picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-about img {
+  width: 80dvw;
+  height: 60dvh;
+  object-fit: cover;
+}
+
+.main-about section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 80%;
+}
+
+.main-about section .text {
+  width: 70%;
+}
+
+.main-about section .text p {
+  margin: 1rem;
+}
+
+.main-about section .title {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 3rem;
+}
+.main-about section .title h1 {
+  font-weight: 600;
+  border-bottom: 2px solid var(--azul);
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: var(--negro);
+  color: var(--blanco);
+  gap: 1rem;
+}
+footer picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer picture img {
+  width: 4rem;
+  margin-top: 1.5rem;
+}
+
+footer figure img {
+  filter: invert(100%);
+}
+
+footer nav {
+  display: flex;
+  gap: 0.5rem;
+}
+footer nav a {
+  text-decoration: none;
+  color: var(--bg);
+}
+footer p {
+  opacity: 0.5;
+}
+
+/* cards  */
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.cards a {
+  text-decoration: none;
+  color: var(--negro);
+}
+
+.cards header {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  text-align: center;
+}
+.cards h2 {
+  margin-top: 1rem;
+}
+.cards ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+.btn-move {
+  background-color: var(--azul);
+  width: 30px;
+  color: var(--blanco);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.cards ul li {
+  background-color: var(--blanco);
+  width: 200px;
+  height: 345px;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+.cards picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards picture img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.cards .text-card {
+  margin: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.boldblue {
+  font-weight: 700;
+  color: var(--azul);
+}
+.bold {
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .cards ul li:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .cards ul li:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .cards ul li {
+    width: 180px;
+    height: 310px;
+  }
+
+  .cards .text-card {
+    margin: 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+/*contacto */
+
+.contactus {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 6rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
+.contact h3 {
+  font-size: 1.5rem;
+  margin: 5rem 2rem 2.5rem 2rem;
+}
+
+.contact figure {
+  margin: 2.5rem 2rem;
+}
+
+.contacto {
+  text-align: left;
+  padding: 0.5rem;
+  width: 400px;
+}
+.minilogo {
+  width: 16px;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+
+.map {
+  height: 350px;
+  /* width: 200px; */
+}
+
+@media (max-width: 800px) {
+  .contactus {
+    gap: 1rem;
+    flex-direction: column;
+    margin: 2rem;
+  }
+  .contact {
+    align-items: center;
+  }
+  .contacto {
+    width: 300px;
+  }
+}
+
+/* mensaje  */
+
+.form-message {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-message h3 {
+  border-bottom: 2px solid var(--azul);
+}
+
+.form-message form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.form-message form input {
+  width: 30rem;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.form-message form textarea {
+  width: 30rem;
+  font-family: "Outfit", sans-serif;
+  padding: 0.5rem;
+}
+
+.form-message form button {
+  width: 50%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border: 0;
+}
+
+.form-message form #enviar {
+  background-color: var(--azul);
+  color: var(--blanco);
+  margin-top: 2rem;
+}
+
+.form-message form #borrar {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+@media (max-width: 700px) {
+  .form-message form input {
+    width: 20rem;
+  }
+
+  .form-message form textarea {
+    width: 20rem;
+  }
+}
+
+/* login */
+
+.login {
+  margin-top: 8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login form {
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--blanco);
+}
+
+.login form input {
+  padding: 0.5rem;
+  border: 1px solid var(--gris);
+  width: 300px;
+}
+
+.login form button {
+  width: 30%;
+  margin: 1rem;
+  background-color: var(--azul);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  color: var(--blanco);
+  font-family: "Outfit", sans-serif;
+}
+
+/* buscar inmueble */
+
+.buscar {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buscar form {
+  padding: 2rem;
+
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-top: 4rem;
+  gap: 1rem;
+  background-color: #ff0000;
+  background-image: url(../img/buscar.jpg);
+  background-size: cover;
+}
+
+.buscar form h1 {
+  color: var(--blanco);
+  font-size: 3rem;
+}
+.buscar form div {
+  display: flex;
+  flex-direction: row;
+}
+
+.buscar form input {
+  padding: 0.5rem;
+  padding-left: 0.7rem;
+  border: 1px solid var(--gris);
+  width: 300px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.buscar form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  filter: invert(100%);
+  background-color: var(--blanco);
+  width: 50px;
+  border-radius: 0 5px 5px 0;
+}
+
+.buscar form select {
+  padding: 0.5rem;
+  border: 1px solid var(--gris);
+  border: none;
+  border-radius: 5px;
+  width: 350px;
+}
+
+.buscar form input::placeholder {
+  color: #000000;
+  font-weight: 500;
+}
+
+/* inmobiliarias */
+
+.inmobiliarias {
+  margin: 3rem 0;
+  padding: 1.5rem;
+  background-color: var(--blanco);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.inmobiliarias h3 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  border-bottom: 2px solid var(--azul);
+}
+
+.inmobiliarias table ul img {
+  width: 100px;
+  border: 1px solid var(--negro);
+  border-radius: 5rem;
+}
+
+.inmobiliarias table tr th p {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.inmobiliarias table tr td {
+  display: flex;
+  gap: 1rem;
+}
+
+.inmobiliarias table ul li {
+  list-style: none;
+  margin: 1rem;
+}
+.inmobiliarias table ul a {
+  background-color: var(--azul);
+  text-decoration: none;
+  color: var(--blanco);
+  padding: 0.5rem;
+  border-radius: 5rem;
+}
+
+/* venta */
+#inmuebles-venta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5rem 0;
+}
+
+#inmuebles-venta a {
+  text-decoration: none;
+}
+
+#inmuebles-venta header {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  text-align: center;
+}
+#inmuebles-venta h2 {
+  margin-top: 1rem;
+}
+#inmuebles-venta ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+.btn-move {
+  background-color: var(--azul);
+  width: 30px;
+  color: var(--blanco);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+#inmuebles-venta ul li {
+  background-color: var(--blanco);
+  width: 200px;
+  height: 270px;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+#inmuebles-venta picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inmuebles-venta picture img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem 1rem 0 0;
+}
+
+#inmuebles-venta .text-card {
+  margin: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.boldblue {
+  font-weight: 700;
+  color: var(--azul);
+}
+.bold {
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  #inmuebles-venta ul li:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  #inmuebles-venta ul li:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  #inmuebles-venta ul li {
+    width: 180px;
+    height: 310px;
+  }
+
+  #inmuebles-venta .text-card {
+    margin: 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* full card */
+
+.full-card {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-card section {
+  border-bottom: 1px solid var(--negro);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 700px;
+}
+
+.full-card div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.full-card p {
+  margin: 0.5rem 0;
+}
+
+.full-card img {
+  width: 700px;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+.full-card .map-full-card {
+  width: 300px;
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 700px) {
+  .full-card img {
+    width: 500px;
+  }
+
+  .full-card section {
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .full-card div {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}

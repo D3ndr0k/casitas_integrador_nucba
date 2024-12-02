@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casitas</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <a href="index.html">
+        <picture>
+          <img src="./assets/img/casitaslogo.webp" alt="logo Casitas" />
+        </picture>
+      </a>
+      <div>
+        <input class="menu-open" id="menu-open" type="checkbox" />
+        <label for="menu-open">
+          <svg
+            class
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            style="fill: rgba(0, 0, 0, 1)"
+          >
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+          </svg>
+        </label>
+
+        <nav id="menu">
+          <a href="./alquiler.html">Alquiler</a>
+          <a href="./venta.html">Venta</a>
+          <a href="./buscar.html#inmobiliarias">Inmobiliarias</a>
+          <a href="./login.html">Ingresar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="login">
+      <form action="./home.html">
+        <h2>Iniciar sesión</h2>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Contraseña" required />
+        <button type="submit">Ingresar</button>
+        <p>
+          Aún no estás registrado?
+          <a href="registro.html">Regístrate aquí </a>
+        </p>
+      </form>
+    </main>
+  </body>
+</html>
